@@ -1,12 +1,17 @@
 import { useState } from "react";
 
 function App() {
+  const [text, setText] = useState("11");
+
   return (
     <div className="App">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora maxime
-      earum rem repudiandae asperiores beatae sequi animi hic eligendi quia
-      architecto exercitationem nostrum reprehenderit culpa eaque optio,
-      voluptatibus facere ut?
+      <input
+        type="text"
+        onChange={({ target: { value } }) => {
+          setText(value);
+        }}
+        value={text}
+      />
     </div>
   );
 }
